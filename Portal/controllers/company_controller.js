@@ -2,7 +2,7 @@ const Companywise = require('../models/Companywise');
 const mongoose=require('mongoose');
 exports.createCompany = async (req, res) => {
   try {
-    await mongoose.connect('mongodb://127.0.0.1:27017/College_Database');
+    await mongoose.connect(process.env.MONGODB_URL);
     const { company, eligibility,rounds,package } = req.body;
 
     const newCompanywise = new Companywise({

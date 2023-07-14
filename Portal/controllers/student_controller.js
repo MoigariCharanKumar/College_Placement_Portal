@@ -20,8 +20,7 @@ const upload = multer({ storage: storage });
 exports.createStudent = async (req, res) => {
   try {
     // Wait until MongoDB connection is established
-    await mongoose.connect('mongodb://127.0.0.1:27017/College_Database');
-
+    await mongoose.connect(process.env.MONGODB_URL);
     upload.single('student_image')(req, res, async function (err) {
       if (err) {
         console.error(err);

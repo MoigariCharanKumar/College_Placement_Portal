@@ -2,7 +2,7 @@ const Post = require('../models/Post');
 const mongoose=require('mongoose');
 exports.createPost = async (req, res) => {
   try {
-    await mongoose.connect('mongodb://127.0.0.1:27017/College_Database');
+    await mongoose.connect(process.env.MONGO_URL);
     const { title, company, branch, description, rounds,package,deadline, link, companycontact } = req.body;
 
     // Check if all required fields are provided

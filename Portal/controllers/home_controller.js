@@ -5,8 +5,7 @@ const EventRegistered = require('../models/JobApplications');
 const mongoose=require('mongoose');
 exports.showHomePage = async (req, res) => {
   try {
-    await mongoose.connect('mongodb://127.0.0.1:27017/College_Database');
-    // Fetch data from the respective collections
+    await mongoose.connect(process.env.MONGODB_URL);    // Fetch data from the respective collections
     const students = await Student.find();
 
     // Render the adminDB EJS template and pass the data as variables

@@ -4,7 +4,7 @@ const JobApplications=require('../models/JobApplications')
 const mongoose=require('mongoose');
 exports.adminDataBase = async (req, res) => {
   try {
-    await mongoose.connect('mongodb://127.0.0.1:27017/College_Database');
+    await mongoose.connect(process.env.MONGODB_URL);
     // Fetch data from the respective collections
     const students = await Student.find();
     const posts = await Post.find();

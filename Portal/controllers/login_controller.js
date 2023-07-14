@@ -2,7 +2,7 @@ const Student = require('../models/Student');
 const mongoose = require('mongoose');
 
 // Initialize the Mongoose connection
-mongoose.connect('mongodb://127.0.0.1:27017/College_Database', {
+mongoose.connect(process.env.MONGODB_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
