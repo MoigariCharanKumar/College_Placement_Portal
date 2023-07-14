@@ -1,0 +1,92 @@
+/* Add the CSS styles here */
+
+.company-list {
+margin: 10px;
+box-shadow: #555555;
+  background-color: rgb(222, 227, 231);
+}
+.company-list h2{
+  text-align: center;
+  font-size: 50px;
+  color: #272323;
+}
+
+.company {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #faf8f9;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.company h3 {
+  margin-bottom: 10px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.company .summary {
+  color: #555555;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.company .read-more {
+  color: #007bff;
+  cursor: pointer;
+  display: block;
+}
+
+.company-details {
+  margin-top: 15px;
+  display: none;
+  box-shadow: #555555;
+}
+
+.company-details h4 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.company-details p {
+  margin-bottom: 15px;
+}
+
+.company-details ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.company-details ul li {
+  margin-bottom: 10px;
+}
+
+
+.company-details ul li .skills {
+  color: #ca6161;
+  font-size: 19px;
+}
+
+.company-details ul li .salary {
+  color: #ca6161;
+  font-size: 19px;
+}
+
+.company-details ul li .skills-values {
+  color: #333333;
+  font-size: 16px;
+}
+
+.company-details ul li .salary-values {
+  color: #333333;
+  font-size: 16px;
+}
+
+.company-details .read-less {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
+strong{
+  font-size: 22px;
+}

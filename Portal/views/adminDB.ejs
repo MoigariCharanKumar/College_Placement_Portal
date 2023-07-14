@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AdminDB</title>
+  <link rel="stylesheet" type="text/css" href="/css/adminDB.css">
+  <link rel="stylesheet" type="text/css" href="/css/footer.css">
+  <link rel="stylesheet" type="text/css" href="/css/headerwithout.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-v+K+NpxcdyUX8a+u1ze8jj53I3q/QTFV2GCuEDMFgFEMRej5MJVhJqJsINNoXt1hB75egM4MQWlJidS+8qSxIw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  
+  <%- include('partials/headerwithout.ejs') %>
+  <a href="/admin" class="btn btn-primary">Back</a>
+  <h1>AdminDB - Students</h1>
+
+  <div class="table-container">
+    <caption>Student Data</caption>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Roll No</th>
+          <th>Name</th>
+          <th>CGPA</th>
+          <th>Image</th>
+          <th>Mobile</th>
+          <th>Program</th>
+          <th>Branch</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% students.forEach((student) => { %>
+        <tr>
+          <td><%= student.student_rollno %></td>
+          <td><%= student.student_name %></td>
+          <td><%= student.student_cgpa %></td>
+          <td><%= student.student_img %></td>
+          <td><%= student.student_mobile %></td>
+          <td><%= student.student_program %></td>
+          <td><%= student.student_branch %></td>
+          <td>
+            <a href="/adminDB/editProfile/<%= student._id %>" class="btn btn-primary btn-sm btn-action">Edit</a>
+            <a href="/adminDB/deleteStudent/<%= student._id %>" class="btn btn-danger btn-sm btn-action">Delete</a>
+          </td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
+
+  <h1>Posts Database</h1>
+
+  <div class="table-container">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Company</th>
+          <th>Branch</th>
+          <th>Description</th>
+          <th>Rounds</th>
+          <th>Package</th>
+          <th>Deadline</th>
+          <th>Link</th>
+          <th>Company Contact</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% posts.forEach((post) => { %>
+        <tr>
+          <td><%= post.title %></td>
+          <td><%= post.company %></td>
+          <td><%= post.branch %></td>
+          <td><%= post.description %></td>
+          <td><%= post.rounds %></td>
+          <td><%= post.package %></td>
+          <td><%= post.deadline %></td>
+          <td><%= post.link %></td>
+          <td><%= post.companycontact %></td>
+          <td>
+            <a href="/adminDB/editpost/<%= post._id %>" class="btn btn-primary btn-sm btn-action">Edit</a>
+            <a href="/adminDB/deletePost/<%= post._id %>" class="btn btn-danger btn-sm btn-action">Delete</a>
+          </td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
+
+  <%- include('partials/footer.ejs') %>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

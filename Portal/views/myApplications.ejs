@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Webpage with Header and Footer</title>
+  <link rel="stylesheet" type="text/css" href="/css/footer.css">
+  <link rel="stylesheet" type="text/css" href="/css/headerwithout.css">
+  <link rel="stylesheet" type="text/css" href="/css/homeHeader.css">
+  <link rel="stylesheet" type="text/css" href="/css/upcomingPlacements.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+<body>
+  <%- include('partials/homeHeader.ejs') %>
+  <div class="container">
+  <% function getDeadlineDays(deadline) {
+    const now = new Date();
+    const term = new Date(deadline);
+    const differenceInTime = term.getTime() - now.getTime();
+    const differenceInDays = Math.ceil(differenceInTime / (1000 * 3600 * 24));
+    return differenceInDays;
+  }%>
+  <h1>My Applications</h1>
+  <% if (posts.length === 0) { %>
+    <h2 style="text-align: center;margin-top: 10%;margin-bottom: 10%;">No Applications</h2>
+  <% } else { %>
+     <%for (let i = 0; i < posts.length; i++) { %>
+    <div class="post">
+      <p class="deadline-days"><%= getDeadlineDays(posts[i].deadline) %> days left</p>
+      <h2 class="section-heading">Company</h2>
+      <h3 class="company-name"><%= posts[i].company %></h3>
+      <h2 class="section-heading">Title</h2>
+      <h3 class="post-title"><%= posts[i].title %></h3>
+      <h2 class="section-heading">Description</h2>
+      <p class="post-description"><%= posts[i].description.slice(0, 100) %></p>
+      <a href="/applicationDetails/<%= student._id %>/<%= posts[i]._id %>" class="btn btn-primary">Read More</a>
+    </div>
+  <% } %><%}%>
+  </div>
+  <%- include('partials/footer.ejs') %>
+</body>
+</html>

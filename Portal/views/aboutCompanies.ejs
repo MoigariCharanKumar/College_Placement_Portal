@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Companies</title>
+  <link rel="stylesheet" type="text/css" href="/css/homeHeader.css">
+  <link rel="stylesheet" type="text/css" href="/css/footer.css">
+  <link rel="stylesheet" type="text/css" href="/css/aboutCompanies.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/javascript/aboutCompanies.js"></script>
+</head>
+<body>
+  <%- include('partials/homeHeader.ejs') %>
+  
+  <div class="company-list">
+    <h2>About Companies</h2>
+
+    <% for (let i = 0; i < companies.length; i++) { %>
+      <div class="company">
+        <h3><%= companies[i].name %></h3>
+        <p id="company-summary-<%= companies[i]._id %>" class="summary"><%= companies[i].summary %></p>
+        <a href="#" class="read-more" data-id="<%= companies[i]._id %>">Read More</a>
+        <div id="company-details-<%= companies[i]._id %>" class="company-details">
+          <h4>About <%= companies[i].name %></h4>
+          <p><%= companies[i].description %></p>
+          <h4>Job Roles and Required Skills</h4>
+          <ul>
+            <% for (let j = 0; j < companies[i].jobRoles.length; j++) { %>
+              <li>
+                <strong><%= companies[i].jobRoles[j].role %></strong>
+                <br>
+                <span class="skills">Required Skills:</span>
+                <span class="skills-values"><%= companies[i].jobRoles[j].skills.join(', ') %></span>
+                <br>
+                <span class="salary">Average Salary:</span>
+                <span class="salary-values"><%= companies[i].jobRoles[j].averageSalary %></span>
+              </li>
+            <% } %>
+          </ul>
+          <h4>How to Apply</h4>
+          <a href="<%= companies[i].jobApplicationLink %>" target="_blank"><%= companies[i].jobApplicationLink %></a>
+          <div><a href="#" class="read-less" data-id="<%= companies[i]._id %>">Read Less</a></div>
+        </div>
+      </div>
+    <% } %>
+  </div>
+  <%- include('partials/footer.ejs') %>
+</body>
+</html>

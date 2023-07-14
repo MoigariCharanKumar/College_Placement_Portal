@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Profile</title>
+  <link rel="stylesheet" type="text/css" href="/css/footer.css">
+  <link rel="stylesheet" type="text/css" href="/css/headerwithout.css">
+  <link rel="stylesheet" type="text/css" href="/css/homeHeader.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/studentProfile.css">
+</head>
+<body>
+    <%- include('partials/homeHeader.ejs') %>
+  <h1>Student Profile</h1>
+  <div class="student-details">
+    <h2><%= student.student_name %></h2>
+    <img src="/assets/uploads/<%= student.student_rollno %>.jpg" alt="Profile Image">
+    <p><strong>Roll No:</strong> <%= student.student_rollno %></p>
+    <p><strong>Password:</strong> <%= student.student_pass %></p>
+    <p><strong>CGPA:</strong> <%= student.student_cgpa %></p>
+    <p><strong>Mobile:</strong> <%= student.student_mobile %></p>
+    <p><strong>Program:</strong> <%= student.student_program %></p>
+    <p><strong>Branch:</strong> <%= student.student_branch %></p>
+    <a href="/editProfile/<%= student._id %>" class="edit-button">Edit Profile</a>
+  </div>
+  <%- include('partials/footer.ejs') %>
+</body>
+</html>

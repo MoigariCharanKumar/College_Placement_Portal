@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Student Profile</title>
+  <link rel="stylesheet" type="text/css" href="/css/footer.css">
+  <link rel="stylesheet" type="text/css" href="/css/headerwithout.css">
+  <link rel="stylesheet" type="text/css" href="/css/homeHeader.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/editProfile.css">
+</head>
+<body>
+  <%- include('partials/homeHeader.ejs') %>
+  <h1>Edit Student Profile</h1>
+  <form action="/update/<%= student._id %>" method="POST" enctype="multipart/form-data" class="edit-form">
+    <div class="form-group">
+      <label for="student_name">Name</label>
+      <input type="text" id="student_name" name="student_name" value="<%= student.student_name %>" required>
+    </div>
+    <div class="form-group">
+      <label for="student_rollno">Roll No</label>
+      <input type="text" id="student_rollno" name="student_rollno" value="<%= student.student_rollno %>" required>
+    </div>
+    <div class="form-group">
+        <label for="student_pass">Password</label>
+        <input type="text" id="student_pass" name="student_pass" value="<%= student.student_pass %>" required>
+      </div>  
+    <div class="form-group">
+      <label for="student_cgpa">CGPA</label>
+      <input type="number" id="student_cgpa" name="student_cgpa" value="<%= student.student_cgpa %>" required>
+    </div>
+    <div class="form-group">
+      <label for="student_mobile">Mobile</label>
+      <input type="text" id="student_mobile" name="student_mobile" value="<%= student.student_mobile %>" required>
+    </div>
+    <div class="form-group">
+      <label for="student_program">Program</label>
+      <input type="text" id="student_program" name="student_program" value="<%= student.student_program %>" required>
+    </div>
+    <div class="form-group">
+      <label for="student_branch">Branch</label>
+      <input type="text" id="student_branch" name="student_branch" value="<%= student.student_branch %>" required>
+    </div>
+    <div class="form-group">
+      <label for="student_img">Profile Image</label>
+      <input type="file" id="student_img" name="student_img">
+    </div>
+    <button type="submit" class="update-button">Update Profile</button>
+  </form>
+  <%- include('partials/footer.ejs') %>
+</body>
+</html>

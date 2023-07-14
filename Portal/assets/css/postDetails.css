@@ -1,0 +1,75 @@
+.post-details {
+    background-color: #dbdbdb;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .post-details h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  h1 {
+text-align:center;
+  }
+  .post-detail {
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .post-detail h3 {
+    font-size: 30px;
+    margin-bottom: 5px;
+    color: #963e3e;
+  }
+  
+  .post-detail p {
+    font-size: 25px;
+    color: #383737;
+  }
+  
+  .post-apply {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .post-apply h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .post-apply form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .post-apply input[type="file"] {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .post-apply button {
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .post-apply button:hover {
+    background-color: #0056b3;
+  }
+  

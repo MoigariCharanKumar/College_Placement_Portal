@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Post Details</title>
+  <link rel="stylesheet" type="text/css" href="/css/footer.css">
+  <link rel="stylesheet" type="text/css" href="/css/headerwithout.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-v+K+NpxcdyUX8a+u1ze8jj53I3q/QTFV2GCuEDMFgFEMRej5MJVhJqJsINNoXt1hB75egM4MQWlJidS+8qSxIw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/editPost.css">
+</head>
+<body>
+    <%- include('partials/headerwithout.ejs') %>
+  <h1>Edit Post Details</h1>
+
+  <form action="/adminDB/editpostDetails/<%= post._id %>" method="POST">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" id="title" name="title" value="<%= post.title %>" required>
+    </div>
+    <div class="form-group">
+      <label for="company">Company</label>
+      <input type="text" id="company" name="company" value="<%= post.company %>" required>
+    </div>
+    <div class="form-group">
+      <label for="branch">Branch</label>
+      <input type="text" id="branch" name="branch" value="<%= post.branch %>" required>
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea id="description" name="description" rows="5" required><%= post.description %></textarea>
+    </div>
+    <div class="form-group">
+      <label for="rounds">Rounds</label>
+      <input type="text" id="rounds" name="rounds" value="<%= post.rounds %>" required>
+    </div>
+    <div class="form-group">
+      <label for="package">Package</label>
+      <input type="text" id="package" name="package" value="<%= post.package %>" required>
+    </div>
+    <div class="form-group">
+      <label for="deadline">Deadline</label>
+      <input type="date" id="deadline" name="deadline" value="<%= post.deadline %>" required>
+    </div>
+    <div class="form-group">
+      <label for="link">Link</label>
+      <input type="text" id="link" name="link" value="<%= post.link %>" required>
+    </div>
+    <div class="form-group">
+      <label for="companycontact">Company Contact</label>
+      <input type="text" id="companycontact" name="companycontact" value="<%= post.companycontact %>" required>
+    </div>
+    <button type="submit">Update</button>
+  </form>
+  <%- include('partials/footer.ejs') %>
+
+</body>
+</html>

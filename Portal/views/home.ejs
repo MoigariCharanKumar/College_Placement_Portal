@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Webpage with Header and Footer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-NpYs3/XpGOS+N0cWk5N3wVp1flQ9m0CYcK1JwMf/yTEI8XoODnSHdd4w5uvi34kaN4yI4j1e6cUGNA+2mlePSw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" type="text/css" href="/css/footer.css">
+  <link rel="stylesheet" type="text/css" href="/css/headerwithout.css">
+  <link rel="stylesheet" type="text/css" href="/css/homeHeader.css">
+  <link rel="stylesheet" type="text/css" href="/css/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-RrNO2UQxLyifziuFiKrKWWH8XYP+d5+jO3jZr6NnudX0bHAy3tRumRkfceWVOdZm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <%- include('partials/homeHeader.ejs') %>
+    <div id="carouselExample" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-80 mx-auto" src="https://www.cbit.ac.in/wp-content/uploads/2022/09/Amazon-placement-2022-1536x642.jpg" alt="Image 1">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-80 mx-auto" src="https://www.cbit.ac.in/wp-content/uploads/2023/02/Shruthi-Final-Day-Web-Banner-1536x642.png" alt="Image 2">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-80 mx-auto" src="https://www.cbit.ac.in/wp-content/uploads/2022/03/2.jpg" alt="Image 3">
+        </div>
+        <!-- Add more carousel items as needed -->
+      </div>
+    </div>
+    
+    <section class="statistics-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="statistic">
+              <h4>Companies</h4>
+              <p>138+</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="statistic">
+              <h4>Placement Offers</h4>
+              <p>1340+</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="statistic">
+              <h4>Highest Package</h4>
+              <p>46.5 LPA</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="statistic">
+              <h4>Placement Rate</h4>
+              <p>85%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-previous-placements">
+      <h2 class="section-title">Previous Year's Placements</h2>
+      <h3>Check out the placements data from the previous years:</h3>
+      <ul class="placements-list">
+        <li><a href="/previousPlacements/<%= student._id %>">2022 Placements Data</a></li>
+        <li><a href="/previousPlacements/<%= student._id %>">2021 Placements Data</a></li>
+        <li><a href="/previousPlacements/<%= student._id %>">2020 Placements Data</a></li>
+      </ul>
+    </section>
+    
+    
+    
+  <%- include('partials/footer.ejs') %>
+  <script>
+    // Activate the carousel
+    $(document).ready(function() {
+      $('#carouselExample').carousel({
+        interval: 1000, // Adjust the interval duration as needed (in milliseconds)
+        ride: 'carousel',
+        wrap: true
+      });
+    });
+  </script>  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+body {
+    background-color:  #f5f0f0;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+  }
+  
+  .student-details {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color:#e9e2e2;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .student-details h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .student-details img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    border-radius: 30%;
+  }
+  
+  .student-details p {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #555;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .student-details strong {
+    font-weight: bold;
+  }
+  
+  .edit-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .edit-button:hover {
+    background-color: #0056b3;
+  }
+  

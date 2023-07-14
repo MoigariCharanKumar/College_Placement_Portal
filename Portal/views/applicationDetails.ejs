@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Post Details</title>
+  <link rel="stylesheet" type="text/css" href="/css/footer.css">
+  <link rel="stylesheet" type="text/css" href="/css/headerwithout.css">
+  <link rel="stylesheet" type="text/css" href="/css/homeHeader.css">
+  <link rel="stylesheet" type="text/css" href="/css/applicationDetails.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Add your CSS and other dependencies here -->
+</head>
+<body>
+  <%- include('partials/homeHeader.ejs') %>
+  <div class="post-details">
+    <h1>Event Details</h1>
+    
+    <!-- Existing post details -->
+    <div class="post-detail">
+      <h3>Title</h3>
+      <p><%= post.title %></p>
+    </div>
+    <div class="post-detail">
+      <h3>Company</h3>
+      <p><%= post.company %></p>
+    </div>
+    <div class="post-detail">
+      <h3>Branch</h3>
+      <p><%= post.branch %></p>
+    </div>
+    <div class="post-detail">
+      <h3>Description</h3>
+      <p><%= post.description %></p>
+    </div>
+    <div class="post-detail">
+      <h3>Rounds</h3>
+      <p><%= post.rounds %></p>
+    </div>
+    <div class="post-detail">
+      <h3>Package</h3>
+      <p><%= post.package %></p>
+    </div>
+    <div class="post-detail">
+      <h3>Deadline</h3>
+      <p><%= post.deadline %></p>
+    </div>
+    <div class="post-detail">
+      <h3>Link</h3>
+      <p><%= post.link %></p>
+    </div>
+    <div class="post-detail">
+      <h3>Company Contact</h3>
+      <p><%= post.companycontact %></p>
+    </div>
+    </div>
+    
+<%- include('partials/footer.ejs') %>
+</body>
+</html>

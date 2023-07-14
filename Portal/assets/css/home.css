@@ -1,0 +1,65 @@
+  .statistics-section {
+    background-color: #f0e9e9d7;
+    padding: 30px 0;
+  }
+  
+  .statistics-section .statistic {
+    background-color: #add3ee;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .statistics-section .statistic h4 {
+    font-size: 25px;
+    color: #2b2929;
+    font-weight: bold;
+  }
+  
+  .statistics-section .statistic p {
+    font-size: 25px;
+    color: #222020;
+  }
+  
+  .section-previous-placements {
+    background-color: #f8f8f8;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .section-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .section-previous-placements p {
+    margin-bottom: 15px;
+  }
+
+  .placements-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .placements-list li {
+    margin-bottom: 10px;
+  }
+
+  .placements-list li a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .placements-list li a:hover {
+    background-color: #0056b3;
+  }

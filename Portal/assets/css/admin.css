@@ -1,0 +1,92 @@
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #db5f5f;
+  }
+  /* Update input styles */
+  input[type="text"],
+  input[type="number"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #acaaaa;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+    margin-bottom: 10px; /* Add margin-bottom */
+  }
+  
+  /* Update label styles */
+  label {
+    display: block;
+    font-weight: bold;
+    color: #555;
+    margin-top: 10px;
+    margin-bottom: 5px; /* Add margin-bottom */
+  }
+  
+  /* Update button styles */
+  button[type="submit"] {
+    background-color: #333; /* Change button color to light black */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  /* Update button hover styles */
+  button[type="submit"]:hover {
+    background-color: #222; /* Darken button color on hover */
+  }
+  
+  /* Update container styles */
+  .container {
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+  }
+  
+  /* Update heading styles */
+  h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #161d16; /* Heading color */
+  }
+  
+  /* Update link styles */
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Update primary button styles */
+  .btn-primary {
+    background-color: #333; /* Change button color to light black */
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Update primary button hover styles */
+  .btn-primary:hover {
+    background-color: #222; /* Darken button color on hover */
+  }
+  
+  /* Update form group styles */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
