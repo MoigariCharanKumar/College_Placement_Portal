@@ -4,7 +4,9 @@ const homeController = require('../controllers/home_controller');
 const Student = require('../models/Student');
 const mongoose=require('mongoose');
 router.get('/', async (req, res) => 
-{  await mongoose.connect('mongodb://127.0.0.1:27017/College_Database');
+{
+ await mongoose.connect(process.env.MONGODB_URL);
+
     const studentId = req.query.id; // Get the student ID from the query parameter
     try {
       // Retrieve the student record from the database using the student ID
