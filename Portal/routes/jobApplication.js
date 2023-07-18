@@ -22,7 +22,9 @@ const uploadResume = multer({ storage: resumeStorage }).single('resume');
 
 // POST route to handle resume upload and application creation/update
 router.post('/:studentId/:postId', async (req, res) => {
-  mongoose.connect('mongodb://127.0.0.1:27017/College_Database');
+ // mongoose.connect('mongodb://127.0.0.1:27017/College_Database');
+  await mongoose.connect(process.env.MONGODB_URL);
+
   const { studentId, postId } = req.params;
   const student = new mongoose.Types.ObjectId(studentId); // Convert to ObjectId
 
