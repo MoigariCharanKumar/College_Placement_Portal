@@ -7,7 +7,9 @@ const mongoose = require('mongoose');
 
 // GET request for accessing the previous years placements detail page
 router.get('/:studentId', async (req, res) => {
-    await mongoose.connect('mongodb://127.0.0.1:27017/College_Database');
+    //await mongoose.connect('mongodb://127.0.0.1:27017/College_Database');
+    await mongoose.connect(process.env.MONGODB_URL);
+
   try {
     const studentId = req.params.studentId;
     const student = await Student.findById(studentId);
