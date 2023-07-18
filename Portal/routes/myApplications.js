@@ -7,7 +7,9 @@ const mongoose = require('mongoose');
 // GET route to retrieve post IDs based on student ID
 router.get('/:studentId', async (req, res) => {
   try {
-    await mongoose.connect('mongodb://127.0.0.1:27017/College_Database');
+    //await mongoose.connect('mongodb://127.0.0.1:27017/College_Database');
+    await mongoose.connect(process.env.MONGODB_URL);
+
     const studentId = new mongoose.Types.ObjectId(req.params.studentId);
     const student = await Student.findById(studentId);
     // Find all job applications for the given student ID
