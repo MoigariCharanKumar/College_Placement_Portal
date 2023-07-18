@@ -5,7 +5,9 @@ const Post = require('../models/Post');
 const Student = require('../models/Student');
 // GET route for /home/:studentId/:postId
 router.get('/:studentId/:postId', async (req, res) => {
-    await mongoose.connect('mongodb://127.0.0.1:27017/College_Database');
+    //await mongoose.connect('mongodb://127.0.0.1:27017/College_Database');
+    await mongoose.connect(process.env.MONGODB_URL);
+
   const studentId = new mongoose.Types.ObjectId(req.params.studentId);
   const postId = req.params.postId;
 
