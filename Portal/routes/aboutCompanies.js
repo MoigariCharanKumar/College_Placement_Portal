@@ -109,7 +109,7 @@ router.get('/', async (req, res) => {
     const student = await Student.findById(studentId);
 
     if (student) {
-      res.render('aboutcompanies', { student, companies});
+      res.render('aboutCompanies', { student, companies});
     } else {
       res.send('Invalid student ID');
     }
