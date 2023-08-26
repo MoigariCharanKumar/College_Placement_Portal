@@ -18,9 +18,7 @@
     <% for (let i = 0; i < companies.length; i++) { %>
       <div class="company">
         <h3><%= companies[i].name %></h3>
-        <p id="company-summary-<%= companies[i]._id %>" class="summary"><%= companies[i].summary %></p>
-        <a href="#" class="read-more" data-id="<%= companies[i]._id %>">Read More</a>
-        <div id="company-details-<%= companies[i]._id %>" class="company-details">
+
           <h4>About <%= companies[i].name %></h4>
           <p><%= companies[i].description %></p>
           <h4>Job Roles and Required Skills</h4>
@@ -39,7 +37,6 @@
           </ul>
           <h4>How to Apply</h4>
           <a href="<%= companies[i].jobApplicationLink %>" target="_blank"><%= companies[i].jobApplicationLink %></a>
-          <div><a href="#" class="read-less" data-id="<%= companies[i]._id %>">Read Less</a></div>
         </div>
       </div>
     <% } %>
