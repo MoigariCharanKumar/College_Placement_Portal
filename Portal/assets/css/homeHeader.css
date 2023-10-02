@@ -29,7 +29,7 @@
 }
 /* Fixed width for the student name */
 .navbar-brand h3 {
-  width: 500px; /* Adjust the width as needed */
+  width: 200px; /* Adjust the width as needed */
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
