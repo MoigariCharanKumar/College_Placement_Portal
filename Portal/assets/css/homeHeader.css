@@ -3,10 +3,12 @@
   width: 100%;
 }
 .nav-link {
-  font-size: 20px;
+  font-size: 22px;
+  color:white;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .nav-item {
-  margin: 0 10px;
+  margin: 0 20px;
 }
 
 .navbar-brand  {
@@ -24,4 +26,18 @@
 
 .nav-item:hover .dropdown-menu {
   display: block;
+}
+/* Fixed width for the student name */
+.navbar-brand h3 {
+  font-size: 30px;
+  width: 450px; /* Adjust the width as needed */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+/* Space for navigation items */
+.navbar-nav {
+  flex-grow: 1; /* Occupy remaining available space */
 }

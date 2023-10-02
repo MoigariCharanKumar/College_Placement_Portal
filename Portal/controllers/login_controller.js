@@ -8,7 +8,7 @@ mongoose.connect(process.env.MONGODB_URL, {
 });
 
 module.exports.showLoginForm = function(req, res) {
-  return res.render('login');
+  return res.render('login.ejs', { errorMessage: null })
 };
 
 module.exports.processLogin = async function(req, res) {
@@ -23,7 +23,7 @@ module.exports.processLogin = async function(req, res) {
       // Redirect to the appropriate page based on the user role
         res.redirect(`/home?id=${student._id}`);
     } else {
-      res.send('Invalid username or password');
+      res.render('login.ejs', { errorMessage: 'Invalid username or password. Please try again.' });;
     }
   } catch (error) {
     console.error('Error processing login:', error);
